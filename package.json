@@ -1,0 +1,35 @@
+{
+  "name": "@danielzm/particles-pointer-tracker",
+  "version": "1.0.0",
+  "description": "Drawing particles that follows the mouse pointer.",
+  "main": "./src/particles-pointer-tracker/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-z/particles-pointer-tracker.git"
+  },
+  "keywords": [
+    "javascript",
+    "particles",
+    "canvas",
+    "2d",
+    "animation"
+  ],
+  "author": "Daniel Zamorano <daniel.zamorano.m@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-z/particles-pointer-tracker/issues"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.5"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "homepage": "https://github.com/daniel-z/particles-pointer-tracker#readme"
+}
