@@ -4,7 +4,8 @@
   "description": "Drawing particles that follows the mouse pointer.",
   "main": "./src/particles-pointer-tracker/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel ./src/particles-pointer-tracker/index.js --out-file ./dist/particles-pointer-tracker.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
     "url": "https://github.com/daniel-z/particles-pointer-tracker/issues"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "core-js": "3",
     "dat.gui": "^0.7.5"
   },
   "browserslist": [
@@ -31,5 +34,12 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "https://github.com/daniel-z/particles-pointer-tracker#readme"
+  "homepage": "https://github.com/daniel-z/particles-pointer-tracker#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/preset-env": "^7.6.0"
+  }
 }
