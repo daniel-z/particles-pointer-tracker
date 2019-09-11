@@ -1,9 +1,11 @@
 const CopyPlugin = require('copy-webpack-plugin');
 const distFolderPath = __dirname + '/dist';
-distFileName = 'particles-pointer-tracker.js';
+entryFileName = 'particles-pointer-tracker.js';
+distFileName = entryFileName;
+
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: `./src/${entryFileName}`,
   module: {
     rules: [
       {
@@ -14,17 +16,17 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['.js']
   },
   output: {
     path: distFolderPath,
     publicPath: '/',
-    filename: distFileName
+    filename: `${distFileName}`
   },
   plugins: [new CopyPlugin([
       {
         from: `${distFolderPath}/${distFileName}`,
-        to: '../demo/public'
+        to: '../demo/src/dist'
       }
     ])]
 };

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ParticlesPointerTracker from '../public/particles-pointer-tracker';
+import ParticlesPointerTracker from './dist/particles-pointer-tracker';
 
 export class ParticlesComponent extends Component {
   componentDidMount() {
