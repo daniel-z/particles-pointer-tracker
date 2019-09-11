@@ -1,6 +1,6 @@
-import Controls from './particles-controls';
+import {ParticleControls} from './particles-controls';
 
-export class ParticlePointerTracker {
+class ParticlePointerTracker {
   dots = [];
   particleCount = 500;
   radius = 5;
@@ -72,7 +72,7 @@ export class ParticlePointerTracker {
     this.h = this.ctx.canvas.height = window.innerHeight;
     this.cX = this.w / 2;
     this.cY = this.h / 2;
-    this.UIControls = new Controls(this);
+    this.UIControls = new ParticleControls(this);
   }
 
   init() {
