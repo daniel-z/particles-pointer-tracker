@@ -4,7 +4,8 @@
   "description": "Drawing particles that follows the mouse pointer.",
   "main": "./dist/particles-pointer-tracker.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "build:demo": "cd demo; yarn install"
   },
   "repository": {
     "type": "git",
