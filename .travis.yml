@@ -8,8 +8,6 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_7db0444b4695_key -iv $encrypted_7db0444b4695_iv
     -in deployuser.enc -out deployuser -d
   - chmod 700 deployuser
-  - npm install -g webpack
-  - npm install -g webpack-cli
 script:
   - npm run build
 deploy:
