@@ -5,11 +5,12 @@ cache: yarn
 addons:
   ssh_known_hosts: 68.183.160.56
 before_install:
-- openssl aes-256-cbc -K $encrypted_7db0444b4695_key -iv $encrypted_7db0444b4695_iv
-  -in deployuser.enc -out deployuser -d
-- chmod 700 deployuser
+  - openssl aes-256-cbc -K $encrypted_7db0444b4695_key -iv $encrypted_7db0444b4695_iv
+    -in deployuser.enc -out deployuser -d
+  - chmod 700 deployuser
+  - yarn install
 script:
-- npm run build
+  - npm run build
 deploy:
   skip_cleanup: true
   provider: script
