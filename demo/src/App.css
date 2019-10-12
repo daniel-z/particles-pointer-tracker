@@ -1,24 +1,81 @@
 
 body {
   background-color: #000;
+  color: #fff;
+  font-family: 'Inconsolata', monospace;
 }
 
 .App {
   display: flex;
   vertical-align: middle;
   align-items: center;
-
   justify-content: center;
   flex-direction: column;
   text-align: center;
 }
 
+.content {
+  position: absolute;
+  min-width: 350px;
+  max-width: 630px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 h1 {
   color: #fff;
-  position: absolute;
-  flex: 1;
   font-family: 'Orbitron', sans-serif;
   font-weight: normal;
   font-size: 50px;
   margin: 10px 0;
+}
+
+p {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.legend,
+a {
+  display: block;
+}
+
+a,
+.legend {
+  padding: 8px 15px;
+  border-radius: 2px;
+  background-color: #0000ff;
+  width: 150px;
+  margin: 10px auto;
+}
+
+.legend {
+  width: auto;
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #0000ff;
+  }
+  
+  50% {
+    background-color: #000077;
+  }
+
+  100% {
+    background-color: #0000ff;
+  }
+}
+
+a {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
 }
