@@ -4,12 +4,6 @@
 set -xe
 
 if [ $TRAVIS_BRANCH == "master" ] ; then
-    # building demo
-    cd ./demo
-    yarn install
-    yarn build
-    cd ../
-
     # setup ssh agent, git config and remote
     eval "$(ssh-agent -s)"
     ssh-add $KEY_PATH
@@ -17,9 +11,16 @@ if [ $TRAVIS_BRANCH == "master" ] ; then
     git config user.name "$GIT_USERNAME"
     git config user.email "$GIT_EMAIL"
 
+    # building demo
+    cd ./demo
+    yarn install
+    yarn build
+
     # commit compressed files and push it to remote
     rm -f .gitignore
-    cp .travis/deployignore .gitignore
+    cp ../.travis/deployignore .gitignore
+    cd ../
+
     git add $DEPLOY_FOLDER
     git status # debug
     git commit -m "$GIT_COMMIT_MESSAGE"
